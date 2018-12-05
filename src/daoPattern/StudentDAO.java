@@ -2,8 +2,6 @@ package daoPattern;
 
 import java.util.List;
 
-import java.util.Set;
-
 
 /**
  * This is the top-level interface which 1) exposes core functionalities to the client/driver program
@@ -20,13 +18,14 @@ import java.util.Set;
 public interface StudentDAO {
 
 
-    Set<Student> getStudentList();
+    List<Student> getStudentList();
 
-    void updateStudentSeatNum(String name, int seatNum);
+    Student getStudent(int seatNo);
 
+    void updateStudentSeatNum(Student name, int seatNum);
 
-    void addStudent();
+    void deleteStudent(Student student);
 
-    void deleteStudent(String name);
+    void addStudent(Student student);
 
 }

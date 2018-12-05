@@ -13,5 +13,11 @@ public class DaoDemo {
 
     public static void main(String[] args) {
 
+        StudentDAO api = new StudentDAOImpl();
+
+        api.getStudentList().forEach(student ->
+                System.out.println("Student: " + student.getName() + "@Seat No. " + student.getSeatNo()));
+
+
     }
 }
