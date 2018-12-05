@@ -17,6 +17,7 @@ public class StudentDAOImpl implements StudentDAO {
      */
     public StudentDAOImpl() {
         students = new ArrayList<>();
+        seatTaken = new HashSet<>();
 
         Student curry = new Student("Steph Curry", 30);
         Student durant = new Student("Kevin Durant", 35);
@@ -25,6 +26,7 @@ public class StudentDAOImpl implements StudentDAO {
         students.add(curry);
         students.add(durant);
         students.add(thompson);
+
 
         students.forEach(s -> seatTaken.add(s.getSeatNo()));
 
